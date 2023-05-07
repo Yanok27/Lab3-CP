@@ -8,9 +8,12 @@ using LAB3_CP_.Factories.Abstract;
 
 namespace LAB3_CP_.Factories.Abstract
 {
-    public abstract class FindProcessor:IFindConfiguration<Processor>
+    public abstract class FindProcessor:FindConfiguration
     {
-        public abstract IEnumerable<Processor> Find(object criterion);
-     
+        public override IProduct FactoryMethod()
+        {
+            return new Processor();
+        }
+
     }
 }

@@ -8,9 +8,11 @@ using LAB3_CP_.Factories.Abstract;
 
 namespace LAB3_CP_.Factories.Abstract
 {
-    public abstract class FindMemory:IFindConfiguration<Memory>
+    public class FindMemory:FindConfiguration
     {
-        public abstract IEnumerable<Memory> Find(object criterion);
-        
+        public override IProduct FactoryMethod()
+        {
+            return new Memory();
+        }
     }
 }

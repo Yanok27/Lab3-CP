@@ -8,9 +8,12 @@ using LAB3_CP_.Factories.Abstract;
 
 namespace LAB3_CP_.Factories.Abstract
 {
-    public abstract class FindMotherboard:IFindConfiguration<Motherboard>
+    public abstract class FindMotherboard:FindConfiguration
     {
-        public abstract IEnumerable<Motherboard> Find(object criterion);
-        
+        public override IProduct FactoryMethod()
+        {
+            return new Motherboard();
+        }
+
     }
 }

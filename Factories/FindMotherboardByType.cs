@@ -17,12 +17,12 @@ namespace LAB3_CP_.Factories
             _dContext = dContext;
         }
 
-        public override IEnumerable<Motherboard> Find(object name)
-        {
-           var criterion = (string)name;
-           return _dContext.Motherboards.Where(m => (m.Name).Contains((string)name)).ToList();
-            
-        }
+        //public override IEnumerable<Motherboard> Find(object name)
+        //{
+        //   var criterion = (string)name;
+        //   return _dContext.Motherboards.Where(m => (m.Name).Contains((string)name)).ToList();
+        //    
+        //}
 
         
 

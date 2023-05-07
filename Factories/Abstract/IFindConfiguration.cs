@@ -7,9 +7,14 @@ using LAB3_CP_.Models;
 
 namespace LAB3_CP_.Factories.Abstract
 {
-    public interface IFindConfiguration<TElement>
+    public abstract class FindConfiguration
     {
-        public IEnumerable<TElement> Find(object criterion);
+        public abstract IProduct FactoryMethod();
+        public IProduct Find(string name, string sku, decimal price)
+        {
+            var product = FactoryMethod();
+            return product.Find(name, sku, price);
+        }
        
     }
 }

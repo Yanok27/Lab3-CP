@@ -7,10 +7,23 @@ using LAB3_CP_.Enums;
 
 namespace LAB3_CP_.Models
 {
-    public class Processor:Product
+    public class Processor:IProduct
     {
+        public string Name { get; set; }
+        public string SKU { get; set; }
+        public decimal Price { get; set; }
         public ConnectorType ConnectorType { get; set; }
         public int CoreCount { get; set; }
         public double ClockSpeed { get; set; }
+
+        public IProduct Find(string name, string SKU, decimal price)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetInfo()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

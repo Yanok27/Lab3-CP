@@ -8,9 +8,12 @@ using LAB3_CP_.Factories.Abstract;
 
 namespace LAB3_CP_.Factories.Abstract
 {
-    public abstract class FindHardDrive:IFindConfiguration<HardDrive>
+    public class FindHardDrive:FindConfiguration
     {
-        public abstract IEnumerable<HardDrive> Find(object criterion);
-       
+        public override IProduct FactoryMethod()
+        {
+            return new HardDrive();
+        }
+
     }
 }
